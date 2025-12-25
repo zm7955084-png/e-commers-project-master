@@ -1,0 +1,130 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Light (day) palette — trendy, soft and high-contrast */
+  --background: #F7FBFC; /* very light cyan */
+  --foreground: #0F1724; /* deep slate */
+  --card: #FFFFFF; /* white cards */
+  --card-foreground: #0F1724;
+  --popover: #FFFFFF;
+  --popover-foreground: #0F1724;
+  --primary: #7C3AED; /* vibrant violet */
+  --primary-foreground: #FFFFFF;
+  --secondary: #06B6D4; /* soft teal accent */
+  --secondary-foreground: #04263A;
+  --muted: #F1F5F9; /* subtle surfaces */
+  --muted-foreground: #64748B;
+  --accent: #06B6D4;
+  --accent-foreground: #04263A;
+  --destructive: #EF4444; /* clear destructive red */
+  --border: #E6EEF8; /* soft border */
+  --input: #FFFFFF;
+  --ring: rgba(124,58,237,0.18);
+  --chart-1: #7C3AED;
+  --chart-2: #06B6D4;
+  --chart-3: #F59E0B;
+  --chart-4: #10B981;
+  --chart-5: #EF4444;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #0F1724;
+  --sidebar-primary: #7C3AED;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #06B6D4;
+  --sidebar-accent-foreground: #04263A;
+  --sidebar-border: #E6EEF8;
+  --sidebar-ring: rgba(6,182,212,0.12);
+}
+
+.dark {
+  /* Dark palette — comfortable low-light colors */
+  --background: #071422; /* deep navy */
+  --foreground: #E6F0FB; /* pale cyan */
+  --card: #0B2533; /* slightly lighter card */
+  --card-foreground: #E6F0FB;
+  --popover: #0B2533;
+  --popover-foreground: #E6F0FB;
+  --primary: #8B5CF6; /* softer violet in dark */
+  --primary-foreground: #061020;
+  --secondary: #06B6D4;
+  --secondary-foreground: #061020;
+  --muted: #071422;
+  --muted-foreground: #94A3B8;
+  --accent: #06B6D4;
+  --accent-foreground: #061020;
+  --destructive: #F87171;
+  --border: rgba(255,255,255,0.06);
+  --input: rgba(255,255,255,0.03);
+  --ring: rgba(139,92,246,0.16);
+  --chart-1: #8B5CF6;
+  --chart-2: #06B6D4;
+  --chart-3: #F59E0B;
+  --chart-4: #10B981;
+  --chart-5: #FB7185;
+  --sidebar: #071422;
+  --sidebar-foreground: #E6F0FB;
+  --sidebar-primary: #8B5CF6;
+  --sidebar-primary-foreground: #061020;
+  --sidebar-accent: #06B6D4;
+  --sidebar-accent-foreground: #061020;
+  --sidebar-border: rgba(255,255,255,0.06);
+  --sidebar-ring: rgba(6,182,212,0.12);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1{
+    @apply text-2xl font-semibold;
+  }
+  h2{
+    @apply text-xl font-medium;
+  }
+}
